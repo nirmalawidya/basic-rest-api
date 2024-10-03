@@ -47,11 +47,11 @@ model transaction_detail {
   medicine_detail    medicine    @relation(fields: [medicine_id], references: [id])
 }
 
-model admin {
-  id       Int    @id @default(autoincrement())
-  name     String @default("")
-  email    String @unique @default("")
-  password String @default("")
+model admin {  // tabel Admin
+  id        Int      @id @default(autoincrement()) // id, name, email termasuk kolom
+  name      String   @default("")
+  email     String   @unique @default("")
+  password  String   @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 }
